@@ -20,8 +20,8 @@ add_action('login_enqueue_scripts', function () {
 	echo "<style>#login h1 a {background-image: url('".esc_url($logo_url)."'); }</style>";
 	?>
 	<style type="text/css">
-		#login h1 a{height: 230px;width: 320px; background-size: contain;}
-		body.login{background:#000;}
+		#login h1 a {min-height: 130px; width: 100%; background-size: contain; background-position: center center; }
+		body.login{background:#fcfcff;}
 	</style>
 	<?php 
 });
