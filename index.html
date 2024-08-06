@@ -14,6 +14,34 @@
 <link href="https://fonts.googleapis.com/css?family=Muli:400,400i,800,800i" rel="stylesheet" type="text/css" />
 <!-- Core theme CSS (includes Bootstrap)-->
 <link href="css/styles.css" rel="stylesheet" />
+
+    <!-- emailjs.com -->
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+    <script type="text/javascript">
+        (function() {
+            // https://dashboard.emailjs.com/admin/account
+            emailjs.init({
+              publicKey: "Z_U-gH48gzElJgpgu",
+          });
+        })();
+    </script>
+    <script type="text/javascript">
+        window.onload = function() {
+            document.getElementById('contactformemailjs').addEventListener('submit', function(event) {
+                event.preventDefault();
+                // Email_Services_ID Email_Templates_ID
+                emailjs.sendForm('service_sqdrm9q', 'template_wnkmvfw', this)
+                .then(() => {
+                    console.log('SUCCESS!');
+                    document.getElementById("emailthank").innerHTML = 'Thank for your message.';
+                }, (error) => {
+                    console.log('FAILED...', error);
+                });
+            });
+        }
+    </script>
+
+
 </head>
 <body id="page-top">
 <!-- Navigation-->
@@ -31,6 +59,7 @@
 <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#education">Education</a></li>
 <!-- <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#interests">Interests</a></li> -->
 <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#awards">Awards</a></li>
+<li class="nav-item"><a class="nav-link js-scroll-trigger" href="#contactme">Contact Me</a></li>
 </ul>
 </div>
 </nav>
@@ -176,9 +205,9 @@
 </div>
 </div>
 </section>
-<hr class="m-0" />
 <!-- Interests-->
-<!-- <section class="resume-section" id="interests">
+<!-- <hr class="m-0" />
+<section class="resume-section" id="interests">
 <div class="resume-section-content">
 <h2 class="mb-5">Interests</h2>
 <p>Apart from being a web developer, I enjoy most of my time being outdoors. In the winter, I am an avid skier and novice ice climber. During the warmer months here in Colorado, I enjoy mountain biking, free climbing, and kayaking.</p>
@@ -195,6 +224,59 @@
 <li class="fas fa-trophy text-warning"></li><li class="mb-5">Mobile Web Specialist</li>
 </ul>
 </div>
+</section>
+<!-- contactme-->
+<!-- 
+from_site
+form_name
+form_email
+form_phone
+form_subject
+form_message
+ -->
+<hr class="m-0" />
+<section class="resume-section" id="contactme">
+    <div class="resume-section-content">
+        <h2 class="mb-3">Send a Message</h2>
+        <div class="row g-3">
+            <div class="col-md-6">
+                <form id="contactformemailjs" style="max-width: 400px;">
+                    <input type="hidden" name="from_site" value="imranmajeed.com">
+                    <div class="row g-3">
+                        <div class="col-12">
+                            <label for="your-name" class="form-label">Your Name</label>
+                            <input type="text" class="form-control" id="form_name" name="form_name" required>
+                        </div>
+                        <div class="col-12">
+                            <label for="form_email" class="form-label">Your Email</label>
+                            <input type="email" class="form-control" id="form_email" name="form_email" required>
+                        </div>
+                        <div class="col-12">
+                            <label for="form_phone" class="form-label">Your Phone</label>
+                            <input type="tel" class="form-control" id="form_phone" name="form_phone" required>
+                        </div>
+                        <div class="col-12">
+                            <label for="form_subject" class="form-label">Your Subject</label>
+                            <input type="text" class="form-control" id="form_subject" name="form_subject">
+                        </div>
+                        <div class="col-12">
+                            <label for="form_message" class="form-label">Your Message</label>
+                            <textarea class="form-control" id="form_message" name="form_message" rows="3" required></textarea>
+                        </div>
+                        <div class="col-12">
+                            <button type="submit" class="btn btn-dark w-100 fw-bold" >Send</button>
+                        </div>
+                    </div>
+                </form>
+            </div>
+            <div class="col-md-6">
+                <!-- thanks -->
+                <div id="emailthank">
+                    <img class="img-fluid mx-auto " src="assets/img/email883364_530.svg" alt="email" />
+                </div>
+            </div>
+        </div>
+    </div>
 </section>
 </div>
 <!-- Bootstrap core JS-->
