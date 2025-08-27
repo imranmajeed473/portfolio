@@ -65,6 +65,9 @@
 <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#contactme">Contact Me</a></li>
 </ul>
 </div>
+<button id="installBtn" class="btn btn-primary" style="display:none;">
+  📲 Install App
+</button>
 </nav>
 <!-- Page Content-->
 <div class="container-fluid p-0">
@@ -294,5 +297,25 @@ form_message
       .catch(err => console.log("⚠️ SW registration failed:", err));
   }
 </script>
+<script>
+  // install prompt
+  let deferredPrompt;
+  const installBtn = document.getElementById("installBtn");
+  window.addEventListener("beforeinstallprompt", (e) => {
+    e.preventDefault();
+    deferredPrompt = e;
+    installBtn.style.display = "block";
+  });
+  installBtn.addEventListener("click", async () => {
+    if (deferredPrompt) {
+      deferredPrompt.prompt();
+      const { outcome } = await deferredPrompt.userChoice;
+      console.log(`User response to install: ${outcome}`);
+      deferredPrompt = null;
+      installBtn.style.display = "none";
+    }
+  });
+</script>
 </body>
 </html>
+
