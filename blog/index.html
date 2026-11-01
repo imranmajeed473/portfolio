@@ -1,25 +1,66 @@
----
-layout: default
-title: Blog
-description: Development, WordPress, performance, security, DevOps, and business technology insights by Imran Majeed.
----
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Blog | Imran Majeed</title>
+  <meta name="description" content="Development, WordPress, performance, security, DevOps, Laravel, and ecommerce technology insights by Imran Majeed.">
+  <link rel="canonical" href="https://imranmajeed.com/blog/">
+  <link rel="manifest" href="/manifest.json">
+  <link rel="stylesheet" href="/css/styles.css">
+  <link rel="stylesheet" href="/css/blog.css">
+</head>
+<body class="blog-page">
+  <nav class="navbar navbar-dark bg-primary fixed-top p-3 blog-nav">
+    <div class="blog-nav-inner">
+      <a class="navbar-brand" href="/">Imran Majeed</a>
+      <a class="nav-link" href="/blog/">Blog</a>
+    </div>
+  </nav>
 
-<section class="resume-section">
-  <div class="resume-section-content">
-    <h1 class="mb-4">Blog</h1>
+  <main class="blog-main">
+    <section class="blog-shell">
+      <div class="blog-index-header">
+        <h1 class="mb-3">Blog</h1>
+        <p>Practical insights on WordPress, Laravel, ecommerce, security, DevOps, and software leadership for growing businesses and technical teams.</p>
+      </div>
+      <div class="blog-list">
 
-    {% if site.posts.size > 0 %}
-      {% for post in site.posts %}
-        <article class="mb-5">
-          <h2><a href="{{ post.url | relative_url }}">{{ post.title }}</a></h2>
-          <p class="text-primary mb-2">{{ post.date | date: "%B %-d, %Y" }}</p>
-          {% if post.description %}
-            <p>{{ post.description }}</p>
-          {% endif %}
+        <article class="blog-card">
+          <a class="blog-card-link" href="/blog/headless-wordpress-development-services-a-cto-guide-to-faster-scalable-websites/">
+            <p class="blog-meta">November 1, 2026</p>
+            <h2>Headless WordPress Development Services: A CTO Guide to Faster, Scalable Websites</h2>
+            <p>How headless WordPress improves page speed, security, scalability, and ecommerce performance for enterprise teams.</p>
+          </a>
         </article>
-      {% endfor %}
-    {% else %}
-      <p>New articles will be published here.</p>
-    {% endif %}
-  </div>
-</section>
+
+        <article class="blog-card">
+          <a class="blog-card-link" href="/blog/hire-an-enterprise-laravel-development-lead-to-accelerate-product-delivery/">
+            <p class="blog-meta">November 2, 2026</p>
+            <h2>Hire an Enterprise Laravel Development Lead to Accelerate Product Delivery</h2>
+            <p>Understand the commercial value of hiring an enterprise Laravel development lead for secure, scalable business applications.</p>
+          </a>
+        </article>
+
+        <article class="blog-card">
+          <a class="blog-card-link" href="/blog/devops-infrastructure-migration-a-business-guide-to-lower-risk-and-faster-delivery/">
+            <p class="blog-meta">November 3, 2026</p>
+            <h2>DevOps Infrastructure Migration: A Business Guide to Lower Risk and Faster Delivery</h2>
+            <p>Plan a secure DevOps infrastructure migration that reduces downtime, deployment risk, cloud waste, and release delays.</p>
+          </a>
+        </article>
+
+        <article class="blog-card">
+          <a class="blog-card-link" href="/blog/shopify-performance-optimization-for-higher-ecommerce-conversions/">
+            <p class="blog-meta">November 4, 2026</p>
+            <h2>Shopify Performance Optimization for Higher Ecommerce Conversions</h2>
+            <p>Learn how Shopify performance optimization improves Core Web Vitals, reduces abandoned carts, and supports growing ecommerce revenue.</p>
+          </a>
+        </article>
+      </div>
+    </section>
+  </main>
+
+  <script src="/js/scripts.js"></script>
+</body>
+</html>
