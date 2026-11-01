@@ -1,0 +1,15 @@
+title: Imran Majeed
+url: https://imranmajeed.com
+baseurl: ""
+markdown: kramdown
+future: false
+permalink: /blog/:title/
+
+plugins:
+  - jekyll-sitemap
+
+exclude:
+  - Gemfile
+  - Gemfile.lock
+  - README.md
+  - offline-service-worker-guide.md

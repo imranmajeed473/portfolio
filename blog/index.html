@@ -1,0 +1,25 @@
+---
+layout: default
+title: Blog
+description: Development, WordPress, performance, security, DevOps, and business technology insights by Imran Majeed.
+---
+
+<section class="resume-section">
+  <div class="resume-section-content">
+    <h1 class="mb-4">Blog</h1>
+
+    {% if site.posts.size > 0 %}
+      {% for post in site.posts %}
+        <article class="mb-5">
+          <h2><a href="{{ post.url | relative_url }}">{{ post.title }}</a></h2>
+          <p class="text-primary mb-2">{{ post.date | date: "%B %-d, %Y" }}</p>
+          {% if post.description %}
+            <p>{{ post.description }}</p>
+          {% endif %}
+        </article>
+      {% endfor %}
+    {% else %}
+      <p>New articles will be published here.</p>
+    {% endif %}
+  </div>
+</section>
