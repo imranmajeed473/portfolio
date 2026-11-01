@@ -13,7 +13,8 @@
   <meta property="og:title" content="{% if page.meta_title %}{{ page.meta_title | escape }}{% elsif page.title %}{{ page.title | escape }}{% else %}Imran Majeed{% endif %}">
   {% if page.description %}<meta property="og:description" content="{{ page.description | escape }}">{% endif %}
   <meta property="og:url" content="{{ page.url | absolute_url }}">
-  <link rel="stylesheet" href="{{ '/css/styles.css' | relative_url }}">
+  <link rel="stylesheet" href="{{ '/css/styles.css' | relative_url }}?ver=20261102">
+  <link rel="stylesheet" href="{{ '/css/blog.css' | relative_url }}?ver=20261102">
 </head>
 <body id="page-top">
   <nav class="navbar navbar-dark bg-primary fixed-top p-3">
