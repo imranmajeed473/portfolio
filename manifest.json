@@ -1,7 +1,9 @@
 {
+  "id": "/",
   "name": "Imran Majeed Portfolio",
   "short_name": "Portfolio",
-  "start_url": ".",
+  "description": "Software engineering portfolio of Imran Majeed, featuring experience, skills, education, awards, and contact information.",
+  "start_url": "/",
   "display": "standalone",
   "background_color": "#ffffff",
   "theme_color": "#0d6efd",
