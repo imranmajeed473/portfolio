@@ -9,6 +9,7 @@
 
 .blog-page {
   background: var(--blog-background);
+  padding: 0 2px;
 }
 
 .blog-nav {
@@ -32,6 +33,7 @@
 .blog-nav .nav-link {
   color: #fff;
   font-weight: 700;
+  display: inline-block;
 }
 
 .blog-main {
@@ -110,7 +112,7 @@
 }
 
 .blog-article {
-  width: min(100%, 48rem);
+  width: min(100%, 60rem);
   margin: 0 auto;
   border: 1px solid var(--blog-border);
   border-radius: 8px;
@@ -137,11 +139,11 @@
 .blog-article-body h2,
 .blog-article-body h3 {
   margin-top: 2rem;
-  scroll-margin-top: 5rem;
+  scroll-margin-top: 3rem;
 }
 
 .blog-article-body h2 {
-  font-size: clamp(1.7rem, 5vw, 2.4rem);
+  font-size: clamp(1.2rem, 4vw, 1.8rem);
 }
 
 .blog-article-body h3 {
@@ -186,11 +188,12 @@
 
 @media (min-width: 768px) {
   .blog-shell {
-    padding: 4rem 3rem 5rem;
+    padding: 2rem 1rem 3rem;
   }
 
   .blog-list {
     grid-template-columns: repeat(2, minmax(0, 1fr));
+    grid-template-columns: repeat(1, minmax(0, 1fr));
   }
 
   .blog-card-link {
