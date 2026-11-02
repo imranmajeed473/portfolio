@@ -2,17 +2,45 @@
 layout: default
 ---
 
-<section class="resume-section">
-  <article class="resume-section-content">
-    <h1 class="mb-3">{{ page.title }}</h1>
-    <p class="text-primary mb-4">{{ page.date | date: "%B %-d, %Y" }}</p>
+<section class="blog-post-shell">
+  <nav class="blog-breadcrumb">
+    <a href="{{ '/' | relative_url }}">Home</a>
+    <span class="blog-breadcrumb-separator">/</span>
+    <a href="{{ '/blog/' | relative_url }}">Blog</a>
+    <span class="blog-breadcrumb-separator">/</span>
+    <span class="blog-breadcrumb-current">{{ page.title }}</span>
+  </nav>
 
-    {{ content }}
+  <article class="blog-article-card">
+    <header class="blog-article-header">
+      <div class="blog-article-meta-row">
+        <span class="blog-topic-tag tag-{{ page.category_slug | default: 'wordpress' }}">{{ page.category | default: "Architecture" }}</span>
+        <span class="blog-reading-time">{{ page.reading_time | default: "5 min read" }}</span>
+      </div>
+      <h1 class="blog-article-title">{{ page.title }}</h1>
+      <div class="blog-author-bar">
+        <img class="blog-author-avatar" src="{{ '/assets/img/profile.jpg' | relative_url }}" alt="Imran Majeed">
+        <div class="blog-author-details">
+          <span class="blog-author-name">Imran Majeed</span>
+          <span class="blog-author-role">Development Lead at Bills Tech • {{ page.date | date: "%B %-d, %Y" }}</span>
+        </div>
+      </div>
+    </header>
 
-    <hr>
-    <p>
-      Need help with WordPress, PHP, Laravel, Shopify, Drupal, DevOps, or web performance?
-      <a href="https://imranmajeed.com/#contactme">Contact Imran Majeed</a> to discuss consulting or development work.
-    </p>
+    <div class="blog-prose">
+      {{ content }}
+
+      <div class="blog-cta-box">
+        <div class="blog-cta-text">
+          <h4>Need expert architectural consulting?</h4>
+          <p>Discuss WordPress architecture, Laravel scalability, DevOps, or ecommerce performance.</p>
+        </div>
+        <a class="blog-cta-btn" href="https://imranmajeed.com/#contactme">Contact Imran Majeed →</a>
+      </div>
+    </div>
   </article>
+
+  <div class="blog-post-nav-footer">
+    <a class="blog-back-btn" href="{{ '/blog/' | relative_url }}">← Back to All Articles</a>
+  </div>
 </section>

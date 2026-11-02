@@ -1,17 +1,19 @@
-const CACHE_NAME = "portfolio-cache-v4";
+const CACHE_NAME = "portfolio-cache-v5";
 const urlsToCache = [
   "/",
   "/index.html",
-  "/css/styles.css?ver=20261102",
-  "/css/blog.css?ver=20261102",
+  "/css/styles.css?ver=20261102b",
+  "/css/blog.css?ver=20261102b",
   "/blog/",
   "/blog/headless-wordpress-development-services-a-cto-guide-to-faster-scalable-websites/",
   "/blog/hire-an-enterprise-laravel-development-lead-to-accelerate-product-delivery/",
   "/blog/devops-infrastructure-migration-a-business-guide-to-lower-risk-and-faster-delivery/",
   "/blog/shopify-performance-optimization-for-higher-ecommerce-conversions/",
-  "/js/scripts.js?ver=20261102",
+  "/js/scripts.js?ver=20261102b",
   "/assets/img/profile.jpg",
   "/assets/img/favicon.ico",
+  "/assets/img/icon-192.png",
+  "/assets/img/icon-512.png",
   "/offline.html"
 ];
 

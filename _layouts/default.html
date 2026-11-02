@@ -9,20 +9,59 @@
   <meta name="robots" content="index, follow">
   <title>{% if page.meta_title %}{{ page.meta_title | escape }}{% elsif page.title %}{{ page.title | escape }} | Imran Majeed{% else %}Imran Majeed{% endif %}</title>
   <link rel="canonical" href="{{ page.url | absolute_url }}">
+  <link rel="icon" type="image/x-icon" href="{{ '/assets/img/favicon.ico' | relative_url }}">
+  <link rel="apple-touch-icon" href="{{ '/assets/img/icon-192.png' | relative_url }}">
+  <link rel="manifest" href="{{ '/manifest.json' | relative_url }}">
+  <meta name="theme-color" content="#0a66c2">
   <meta property="og:type" content="{% if page.layout == 'post' %}article{% else %}website{% endif %}">
   <meta property="og:title" content="{% if page.meta_title %}{{ page.meta_title | escape }}{% elsif page.title %}{{ page.title | escape }}{% else %}Imran Majeed{% endif %}">
   {% if page.description %}<meta property="og:description" content="{{ page.description | escape }}">{% endif %}
   <meta property="og:url" content="{{ page.url | absolute_url }}">
-  <link rel="stylesheet" href="{{ '/css/styles.css' | relative_url }}?ver=20261102">
-  <link rel="stylesheet" href="{{ '/css/blog.css' | relative_url }}?ver=20261102">
+  <link rel="stylesheet" href="{{ '/css/styles.css' | relative_url }}?ver=20261102b">
+  <link rel="stylesheet" href="{{ '/css/blog.css' | relative_url }}?ver=20261102b">
 </head>
-<body id="page-top">
-  <nav class="navbar navbar-dark bg-primary fixed-top p-3">
-    <a class="navbar-brand" href="{{ '/' | relative_url }}">Imran Majeed</a>
-    <a class="nav-link text-white" href="{{ '/blog/' | relative_url }}">Blog</a>
+<body class="blog-page">
+  <nav class="blog-nav">
+    <div class="blog-nav-inner">
+      <a class="blog-brand" href="{{ '/' | relative_url }}">
+        <img class="blog-brand-avatar" src="{{ '/assets/img/profile.jpg' | relative_url }}" alt="Imran Majeed">
+        <div class="blog-brand-text">
+          <span class="blog-brand-name">Imran Majeed</span>
+          <span class="blog-brand-tagline">Development Lead & Architect</span>
+        </div>
+      </a>
+      <div class="blog-nav-menu">
+        <a class="blog-nav-item" href="{{ '/' | relative_url }}">
+          <span>Portfolio</span>
+        </a>
+        <a class="blog-nav-item active" href="{{ '/blog/' | relative_url }}">
+          <span>Blog</span>
+        </a>
+        <a class="blog-nav-cta" href="{{ '/#contactme' | relative_url }}">
+          Get in Touch
+        </a>
+      </div>
+    </div>
   </nav>
-  <main class="container-fluid p-0">
+
+  <main class="blog-main">
     {{ content }}
   </main>
+
+  <footer class="blog-footer">
+    <div class="blog-footer-inner">
+      <div class="blog-footer-links">
+        <a href="{{ '/' | relative_url }}">Portfolio Home</a>
+        <a href="{{ '/#experience' | relative_url }}">Experience</a>
+        <a href="{{ '/#skills' | relative_url }}">Skills</a>
+        <a href="{{ '/#awards' | relative_url }}">Awards</a>
+        <a href="{{ '/blog/' | relative_url }}">Blog</a>
+        <a href="{{ '/#contactme' | relative_url }}">Contact</a>
+      </div>
+      <p>© 2026 Imran Majeed. All rights reserved. Specialized in WordPress, Laravel, DevOps & Ecommerce Architecture.</p>
+    </div>
+  </footer>
+
+  <script src="{{ '/js/scripts.js' | relative_url }}?ver=20261102b"></script>
 </body>
 </html>

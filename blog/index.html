@@ -3,64 +3,180 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Blog | Imran Majeed</title>
+  <title>Blog & Technical Guides | Imran Majeed</title>
   <meta name="description" content="Development, WordPress, performance, security, DevOps, Laravel, and ecommerce technology insights by Imran Majeed.">
   <link rel="canonical" href="https://imranmajeed.com/blog/">
+  <link rel="icon" type="image/x-icon" href="/assets/img/favicon.ico">
+  <link rel="apple-touch-icon" href="/assets/img/icon-192.png">
   <link rel="manifest" href="/manifest.json">
-  <link rel="stylesheet" href="/css/styles.css?ver=20261102">
-  <link rel="stylesheet" href="/css/blog.css?ver=20261102">
+  <meta name="theme-color" content="#0a66c2">
+  <link rel="stylesheet" href="/css/styles.css?ver=20261102b">
+  <link rel="stylesheet" href="/css/blog.css?ver=20261102b">
 </head>
 <body class="blog-page">
-  <nav class="navbar navbar-dark bg-primary fixed-top p-3 blog-nav">
+
+  <!-- Header / Navigation -->
+  <nav class="blog-nav">
     <div class="blog-nav-inner">
-      <a class="navbar-brand" href="/">Imran Majeed</a>
-      <a class="nav-link" href="/blog/">Blog</a>
+      <a class="blog-brand" href="/">
+        <img class="blog-brand-avatar" src="/assets/img/profile.jpg" alt="Imran Majeed">
+        <div class="blog-brand-text">
+          <span class="blog-brand-name">Imran Majeed</span>
+          <span class="blog-brand-tagline">Development Lead & Architect</span>
+        </div>
+      </a>
+      <div class="blog-nav-menu">
+        <a class="blog-nav-item" href="/">
+          <span>Portfolio</span>
+        </a>
+        <a class="blog-nav-item active" href="/blog/">
+          <span>Blog</span>
+        </a>
+        <a class="blog-nav-cta" href="/#contactme">
+          Get in Touch
+        </a>
+      </div>
     </div>
   </nav>
 
+  <!-- Main Content Shell -->
   <main class="blog-main">
     <section class="blog-shell">
-      <div class="blog-index-header">
-        <h1 class="mb-3">Blog</h1>
-        <p>Practical insights on WordPress, Laravel, ecommerce, security, DevOps, and software leadership for growing businesses and technical teams.</p>
+
+      <!-- Hero Header -->
+      <header class="blog-hero">
+        <div class="blog-badge-pill">
+          <span class="blog-badge-pulse"></span>
+          Engineering & Architecture Insights
+        </div>
+        <h1 class="blog-hero-title">Technical Guides & Case Studies</h1>
+        <p class="blog-hero-desc">
+          Practical insights on Headless WordPress, Enterprise Laravel, Cloud DevOps, and Ecommerce Performance for modern engineering teams and growing businesses.
+        </p>
+      </header>
+
+      <!-- Category Filter Pills -->
+      <div class="blog-filter-bar">
+        <button type="button" class="blog-filter-btn active" onclick="filterArticles('all', this)">All Articles</button>
+        <button type="button" class="blog-filter-btn" onclick="filterArticles('wordpress', this)">WordPress</button>
+        <button type="button" class="blog-filter-btn" onclick="filterArticles('laravel', this)">Laravel</button>
+        <button type="button" class="blog-filter-btn" onclick="filterArticles('devops', this)">DevOps</button>
+        <button type="button" class="blog-filter-btn" onclick="filterArticles('shopify', this)">Shopify</button>
       </div>
-      <div class="blog-list">
 
-        <article class="blog-card">
-          <a class="blog-card-link" href="/blog/headless-wordpress-development-services-a-cto-guide-to-faster-scalable-websites/">
-            <p class="blog-meta">November 1, 2026</p>
-            <h2>Headless WordPress Development Services: A CTO Guide to Faster, Scalable Websites</h2>
-            <p>How headless WordPress improves page speed, security, scalability, and ecommerce performance for enterprise teams.</p>
+      <!-- Articles Grid -->
+      <div class="blog-grid" id="blog-grid">
+
+        <!-- Card 1: Headless WordPress -->
+        <article class="blog-card" data-category="wordpress">
+          <a class="blog-card-inner" href="/blog/headless-wordpress-development-services-a-cto-guide-to-faster-scalable-websites/">
+            <div class="blog-card-meta-top">
+              <span class="blog-topic-tag tag-wordpress">WordPress</span>
+              <span class="blog-reading-time">5 min read</span>
+            </div>
+            <h2 class="blog-card-title">Headless WordPress Development Services: A CTO Guide to Faster, Scalable Websites</h2>
+            <p class="blog-card-excerpt">How headless WordPress improves page speed, security, scalability, and ecommerce performance for enterprise teams.</p>
+            <div class="blog-card-footer">
+              <div class="blog-card-author">
+                <img class="blog-card-author-img" src="/assets/img/profile.jpg" alt="Imran Majeed">
+                <span class="blog-card-author-info">November 1, 2026</span>
+              </div>
+              <span class="blog-card-link-text">Read Guide →</span>
+            </div>
           </a>
         </article>
 
-        <article class="blog-card">
-          <a class="blog-card-link" href="/blog/hire-an-enterprise-laravel-development-lead-to-accelerate-product-delivery/">
-            <p class="blog-meta">November 2, 2026</p>
-            <h2>Hire an Enterprise Laravel Development Lead to Accelerate Product Delivery</h2>
-            <p>Understand the commercial value of hiring an enterprise Laravel development lead for secure, scalable business applications.</p>
+        <!-- Card 2: Laravel -->
+        <article class="blog-card" data-category="laravel">
+          <a class="blog-card-inner" href="/blog/hire-an-enterprise-laravel-development-lead-to-accelerate-product-delivery/">
+            <div class="blog-card-meta-top">
+              <span class="blog-topic-tag tag-laravel">Laravel</span>
+              <span class="blog-reading-time">6 min read</span>
+            </div>
+            <h2 class="blog-card-title">Hire an Enterprise Laravel Development Lead to Accelerate Product Delivery</h2>
+            <p class="blog-card-excerpt">Understand the commercial value of hiring an enterprise Laravel development lead for secure, scalable business applications.</p>
+            <div class="blog-card-footer">
+              <div class="blog-card-author">
+                <img class="blog-card-author-img" src="/assets/img/profile.jpg" alt="Imran Majeed">
+                <span class="blog-card-author-info">November 2, 2026</span>
+              </div>
+              <span class="blog-card-link-text">Read Guide →</span>
+            </div>
           </a>
         </article>
 
-        <article class="blog-card">
-          <a class="blog-card-link" href="/blog/devops-infrastructure-migration-a-business-guide-to-lower-risk-and-faster-delivery/">
-            <p class="blog-meta">November 3, 2026</p>
-            <h2>DevOps Infrastructure Migration: A Business Guide to Lower Risk and Faster Delivery</h2>
-            <p>Plan a secure DevOps infrastructure migration that reduces downtime, deployment risk, cloud waste, and release delays.</p>
+        <!-- Card 3: DevOps -->
+        <article class="blog-card" data-category="devops">
+          <a class="blog-card-inner" href="/blog/devops-infrastructure-migration-a-business-guide-to-lower-risk-and-faster-delivery/">
+            <div class="blog-card-meta-top">
+              <span class="blog-topic-tag tag-devops">DevOps</span>
+              <span class="blog-reading-time">7 min read</span>
+            </div>
+            <h2 class="blog-card-title">DevOps Infrastructure Migration: A Business Guide to Lower Risk and Faster Delivery</h2>
+            <p class="blog-card-excerpt">Plan a secure DevOps infrastructure migration that reduces downtime, deployment risk, cloud waste, and release delays.</p>
+            <div class="blog-card-footer">
+              <div class="blog-card-author">
+                <img class="blog-card-author-img" src="/assets/img/profile.jpg" alt="Imran Majeed">
+                <span class="blog-card-author-info">November 3, 2026</span>
+              </div>
+              <span class="blog-card-link-text">Read Guide →</span>
+            </div>
           </a>
         </article>
 
-        <article class="blog-card">
-          <a class="blog-card-link" href="/blog/shopify-performance-optimization-for-higher-ecommerce-conversions/">
-            <p class="blog-meta">November 4, 2026</p>
-            <h2>Shopify Performance Optimization for Higher Ecommerce Conversions</h2>
-            <p>Learn how Shopify performance optimization improves Core Web Vitals, reduces abandoned carts, and supports growing ecommerce revenue.</p>
+        <!-- Card 4: Shopify -->
+        <article class="blog-card" data-category="shopify">
+          <a class="blog-card-inner" href="/blog/shopify-performance-optimization-for-higher-ecommerce-conversions/">
+            <div class="blog-card-meta-top">
+              <span class="blog-topic-tag tag-shopify">Shopify</span>
+              <span class="blog-reading-time">6 min read</span>
+            </div>
+            <h2 class="blog-card-title">Shopify Performance Optimization for Higher Ecommerce Conversions</h2>
+            <p class="blog-card-excerpt">Learn how Shopify performance optimization improves Core Web Vitals, reduces abandoned carts, and supports growing ecommerce revenue.</p>
+            <div class="blog-card-footer">
+              <div class="blog-card-author">
+                <img class="blog-card-author-img" src="/assets/img/profile.jpg" alt="Imran Majeed">
+                <span class="blog-card-author-info">November 4, 2026</span>
+              </div>
+              <span class="blog-card-link-text">Read Guide →</span>
+            </div>
           </a>
         </article>
+
       </div>
     </section>
   </main>
 
-  <script src="/js/scripts.js?ver=20261102"></script>
+  <!-- Site Footer -->
+  <footer class="blog-footer">
+    <div class="blog-footer-inner">
+      <div class="blog-footer-links">
+        <a href="/">Portfolio Home</a>
+        <a href="/#experience">Experience</a>
+        <a href="/#skills">Skills</a>
+        <a href="/#awards">Awards</a>
+        <a href="/blog/">Blog</a>
+        <a href="/#contactme">Contact</a>
+      </div>
+      <p>© 2026 Imran Majeed. All rights reserved. Specialized in WordPress, Laravel, DevOps & Ecommerce Architecture.</p>
+    </div>
+  </footer>
+
+  <script>
+    function filterArticles(category, btn) {
+      document.querySelectorAll('.blog-filter-btn').forEach(b => b.classList.remove('active'));
+      btn.classList.add('active');
+
+      const cards = document.querySelectorAll('#blog-grid .blog-card');
+      cards.forEach(card => {
+        if (category === 'all' || card.getAttribute('data-category') === category) {
+          card.style.display = 'flex';
+        } else {
+          card.style.display = 'none';
+        }
+      });
+    }
+  </script>
+  <script src="/js/scripts.js?ver=20261102b"></script>
 </body>
 </html>
